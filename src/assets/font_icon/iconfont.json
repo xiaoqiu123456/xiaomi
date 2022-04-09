@@ -6,6 +6,48 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "658035",
+      "name": "钱",
+      "font_class": "qian",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    },
+    {
+      "icon_id": "703973",
+      "name": "话费充值",
+      "font_class": "huafeichongzhi",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "2273359",
+      "name": "闹钟",
+      "font_class": "naozhong",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    },
+    {
+      "icon_id": "11175093",
+      "name": "存储 内存卡",
+      "font_class": "cunchuneicunka",
+      "unicode": "e67e",
+      "unicode_decimal": 59006
+    },
+    {
+      "icon_id": "11346876",
+      "name": "房地产 建筑",
+      "font_class": "fangdichanjianzhu",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "26965213",
+      "name": "f码",
+      "font_class": "fmabeifen2",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
       "icon_id": "7421",
       "name": "定向",
       "font_class": "dingxiang",
