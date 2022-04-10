@@ -1,12 +1,12 @@
 <template>
-  <div class="phone ">
-    <CommonTitle/>
+  <div class="phone">
+    <CommonTitle :title="title" />
     <CommodityLayout>
       <template v-slot:left>
-        <BigImg/>
+        <BigImg src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ac5cafc68c10ce4471869d378f594b52.png?thumb=1&w=293&h=768&f=webp&q=90"/>
       </template>
       <template v-slot:right>
-        <SmallImg v-for="info in phoneList" :commodity-info="info" />
+        <SmallImg v-for="info in phoneList" :key="info.id" :commodityInfo="info" />
       </template>
     </CommodityLayout>
   </div>
@@ -17,6 +17,8 @@ import CommodityLayout from "../../components/CommodityLayout.vue";
 import BigImg from "../../components/BigImg.vue";
 import SmallImg from "../../components/SmallImg.vue";
 import CommonTitle from "../../components/CommonTitle.vue";
+
+const title = '手机'
 
 const phoneList = [
   {

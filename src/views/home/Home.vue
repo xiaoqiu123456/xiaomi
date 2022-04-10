@@ -6,6 +6,7 @@ import Menu from './Menu.vue'
 import MenuBanner from './MenuBanner.vue'
 import Sub from "./Sub.vue";
 import Phone from "./Phone.vue";
+import Wear from "./Wear.vue";
 
 
 
@@ -37,6 +38,8 @@ import Phone from "./Phone.vue";
           </div>
 
           <Phone/>
+
+          <Wear/>
         </div>
       </div>
     </main>

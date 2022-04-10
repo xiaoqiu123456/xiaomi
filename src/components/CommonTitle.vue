@@ -1,6 +1,6 @@
 <template>
 <div class="common-title">
-  <h2 class="title">手机</h2>
+  <h2 class="title">{{ title }}</h2>
   <div class="more">
     <p>更多</p>
     <span class="iconfont icon-quanquanxiangyoujiantou"></span>
@@ -10,7 +10,10 @@
 
 <script>
 export default {
-  name: "CommonTitle"
+  name: "CommonTitle",
+  props: {
+    title: String,
+  }
 }
 </script>
 

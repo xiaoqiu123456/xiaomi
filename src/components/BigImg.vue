@@ -1,7 +1,7 @@
 <template>
 <div class="big-img">
   <Card>
-    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ac5cafc68c10ce4471869d378f594b52.png?thumb=1&w=293&h=768&f=webp&q=90" alt="">
+    <img :src="src" alt="">
   </Card>
 </div>
 </template>
@@ -10,7 +10,10 @@
 import Card from "./Card.vue";
 export default {
   name: "BigImg",
-  components: {Card}
+  components: {Card},
+  props:{
+    src:String,
+  }
 }
 </script>
 

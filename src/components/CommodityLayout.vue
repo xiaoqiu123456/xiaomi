@@ -29,7 +29,7 @@ export default {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  .small-img{
+  & > * {
     margin-left: 14px;
     margin-top: 14px;
     &:nth-child(4n+1) {
