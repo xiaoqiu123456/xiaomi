@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less">
 .commodity-layout{
   display: flex;
 }
@@ -27,6 +27,18 @@ export default {
 .commodity-right{
   margin-left: 14px;
   flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  .small-img{
+    margin-left: 14px;
+    margin-top: 14px;
+    &:nth-child(4n+1) {
+      margin-left: 0;
+    }
+    &:nth-child(-n+4){
+      margin-top: 0;
+    }
+  }
   /*background-color: #42b983;*/
 }
 </style>

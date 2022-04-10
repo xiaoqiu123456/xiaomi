@@ -26,14 +26,16 @@ import Phone from "./Phone.vue";
       </div>
       <!-- 服务 -->
       <Sub/>
-      <div class="advertising-banner container">
-        <a href="#">
-          <img src="../../assets/image/adver" alt="">
-        </a>
-      </div>
 
       <div style="background-color: #f5f5f5">
         <div class="container">
+
+          <div class="advertising-banner">
+            <a href="#">
+              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0e2b43800d3e1ef40470ac04b3e0140b.jpg?thumb=1&w=1533&h=150&f=webp&q=90" alt="">
+            </a>
+          </div>
+
           <Phone/>
         </div>
       </div>
@@ -42,10 +44,9 @@ import Phone from "./Phone.vue";
   </div>
 </template>
 
-<style>
+<style lang="less">
 
 .home-page {
-  color: red;
 }
 
 .menu-banner-wrap {
@@ -66,6 +67,13 @@ import Phone from "./Phone.vue";
 .banner {
   /*width: 992px;*/
   background-color: antiquewhite;
+}
+.advertising-banner{
+  img{
+    display: block;
+    width: 100%;
+    margin: 22px 0;
+  }
 }
 
 
