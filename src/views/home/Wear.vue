@@ -1,13 +1,15 @@
 <template>
   <div class="wear">
-    <CommonTitle title="智能穿戴"/>
+    <CommonTitle title="智能穿戴"
+                 @change="onChange"
+                 :tabs="[{name: '热门', value: 0}, {name: '穿戴', value: 1}]"/>
     <CommodityLayout>
       <template v-slot:left>
         <BigImg
             src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9895c56a7b792fb9053e3085fc261072.jpg?thumb=1&w=293&h=768&f=webp&q=90"/>
       </template>
       <template v-slot:right>
-        <div v-for="(info, index) in wearList" :key="info.id">
+        <div v-for="(info, index) in list" :key="info.id">
           <CommonMore v-if="index === 7" :common-information="info"/>
           <SmallImg v-else :commodityInfo="info"/>
         </div>
@@ -22,8 +24,13 @@ import BigImg from "../../components/BigImg.vue";
 import SmallImg from "../../components/SmallImg.vue";
 import CommonTitle from "../../components/CommonTitle.vue";
 import CommonMore from "../../components/CommonMore.vue";
+import {computed, ref} from "vue";
 
-const wearList = [
+// 当前选择的是哪个标签页 0热门 1穿戴
+const cur = ref(0)
+
+// 热门
+const hotList = [
   {
     "link": "https://www.mi.com/xiaomiwatchs1",
     "id": 20000,
@@ -95,6 +102,66 @@ const wearList = [
     "sourcePrice": null
   }
 ]
+
+// 穿戴
+const wearList = [
+  {
+    "link": "https://www.mi.com/shouhuan6",
+    "id": 22000,
+    "imgUrl": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b28153b80cb2c67564608e56d5c2f3f3.jpg?thumb=1&w=250&h=250&f=webp&q=90",
+    "name": "小米手环6",
+    "info": "全屏实力",
+    "sellingPrice": "2090",
+    "sourcePrice": "2290"
+  },
+  {
+    "link": "https://www.mi.com/shouhuan5/nfc",
+    "id": 22001,
+    "imgUrl": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c84e1bc129dda0c9c0169e1fab1fe521.jpg?thumb=1&w=250&h=250&f=webp&q=90",
+    "name": "小米手环5 NFC版",
+    "info": "多功能NFC 11种运动模式",
+    "sellingPrice": "1890",
+    "sourcePrice": "2290"
+  },
+  {
+    "link": "https://www.mi.com/buy?product_id=13568",
+    "id": 22002,
+    "imgUrl": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/66c7a6e46c5f1a7214eab8182d78171e.jpg?thumb=1&w=250&h=250&f=webp&q=90",
+    "name": "Redmi AirDots 3真无线蓝牙耳机",
+    "info": "圈铁音质，超长续航",
+    "sellingPrice": "1590",
+    "sourcePrice": "1990"
+  },
+  {
+    "link": "https://www.mi.com/buy?product_id=12899",
+    "id": 22003,
+    "imgUrl": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8fd19df34c6b2723f337cb3fb11984a6.png?thumb=1&w=250&h=250&f=webp&q=90",
+    "name": "小米真无线蓝牙耳机Air 2 Pro",
+    "info": "主动降噪/持久续航/无线充",
+    "sellingPrice": "3990",
+    "sourcePrice": "6990"
+  },
+  {
+    "link": "https://www.mi.com/buy?product_id=12036",
+    "id": 22004,
+    "imgUrl": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8a8de2281327e612f3f83fd1a4db6aea.jpg?thumb=1&w=250&h=250&f=webp&q=90",
+    "name": "小米真无线蓝牙耳机Air2 SE",
+    "info": "放肆用，畅快听",
+    "sellingPrice": "1290",
+    "sourcePrice": "1690"
+  }]
+
+// 计算属性computed
+const list = computed(() => {
+  if (cur.value === 0) return hotList
+  if (cur.value === 1) return wearList
+})
+
+// 子组件变换时执行的函数
+const onChange = (a) => {
+  cur.value = a.value
+}
+
 </script>
 
 <style scoped>
