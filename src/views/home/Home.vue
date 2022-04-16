@@ -7,6 +7,14 @@ import MenuBanner from './MenuBanner.vue'
 import Sub from "./Sub.vue";
 import Phone from "./Phone.vue";
 import Wear from "./Wear.vue";
+import Notebook from "./Notebook.vue";
+import ElectricAppliance from "./ElectricAppliance.vue";
+import HouseholdAppliances from "./HouseholdAppliances.vue";
+import AdvertisingBanner from "../../components/AdvertisingBanner.vue";
+import KitchenAppliances from "./KitchenAppliances.vue";
+import SmartHome from "./SmartHome.vue";
+import SportsTravel from "./SportsTravel.vue";
+import DailyNecessities from "./DailyNecessities.vue";
 
 
 
@@ -31,15 +39,20 @@ import Wear from "./Wear.vue";
       <div style="background-color: #f5f5f5">
         <div class="container">
 
-          <div class="advertising-banner">
-            <a href="#">
-              <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0e2b43800d3e1ef40470ac04b3e0140b.jpg?thumb=1&w=1533&h=150&f=webp&q=90" alt="">
-            </a>
-          </div>
+          <AdvertisingBanner src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0e2b43800d3e1ef40470ac04b3e0140b.jpg?thumb=1&w=1533&h=150&f=webp&q=90" />
 
           <Phone/>
 
           <Wear/>
+          <Notebook/>
+          <ElectricAppliance/>
+          <HouseholdAppliances/>
+          <AdvertisingBanner src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/83c20664e83d8a6a8e938f2ba7e80e18.png?thumb=1&w=1533&h=150&f=webp&q=90"/>
+          <KitchenAppliances/>
+          <SmartHome/>
+          <SportsTravel/>
+          <AdvertisingBanner src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/88e35cffc82cd98cd53172460067af17.jpg?thumb=1&w=1533&h=150&f=webp&q=90"/>
+          <DailyNecessities/>
         </div>
       </div>
     </main>
@@ -71,13 +84,7 @@ import Wear from "./Wear.vue";
   /*width: 992px;*/
   background-color: antiquewhite;
 }
-.advertising-banner{
-  img{
-    display: block;
-    width: 100%;
-    margin: 22px 0;
-  }
-}
+
 
 
 
