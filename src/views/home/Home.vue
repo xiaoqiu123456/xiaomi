@@ -15,6 +15,7 @@ import KitchenAppliances from "./KitchenAppliances.vue";
 import SmartHome from "./SmartHome.vue";
 import SportsTravel from "./SportsTravel.vue";
 import DailyNecessities from "./DailyNecessities.vue";
+import Video from "../../components/Video.vue";
 
 
 
@@ -53,6 +54,7 @@ import DailyNecessities from "./DailyNecessities.vue";
           <SportsTravel/>
           <AdvertisingBanner src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/88e35cffc82cd98cd53172460067af17.jpg?thumb=1&w=1533&h=150&f=webp&q=90"/>
           <DailyNecessities/>
+          <Video/>
         </div>
       </div>
     </main>

@@ -9,7 +9,7 @@
     </a>
   </div>
   <div class="more" v-else>
-    <p>更多</p>
+    <p>{{more}}</p>
     <span class="iconfont icon-quanquanxiangyoujiantou"></span>
   </div>
 </div>
@@ -25,6 +25,10 @@ export default {
       default: [],
     },
     title: String,
+    more:{
+      type:String,
+      default: '更多'
+    }
   },
   // 数据
   data() {
